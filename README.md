@@ -24,39 +24,3 @@ The `waitFor` function returns an object with the following methods:
 const request = () => getTodo(1);
 await waitFor(request).toHave("userId", 1);
 ```
-
-# waitForTodo Function Documentation
-
-The `waitForTodo` function is a utility function that waits for a `getTodo` promise to resolve and retries until the assertion passes. It uses the `waitFor` function to wait for and retry the `getTodo` promise.
-
-## Parameters
-
-- `id`: The ID of the todo item to fetch.
-
-## Return Value
-
-The `waitForTodo` function returns the result of the `waitFor` function.
-
-## Example Usage
-
-```javascript
-await waitForTodo(1).toHave("userId", 1);
-```
-
-# getTodo Function Documentation
-
-The `getTodo` function is an asynchronous function that fetches a todo item from the `https://jsonplaceholder.typicode.com/todos/{id}` API endpoint.
-
-## Parameters
-
-- `id`: The ID of the todo item to fetch.
-
-## Return Value
-
-The `getTodo` function returns the data of the fetched todo item.
-
-## Example Usage
-
-```javascript
-const todo = await getTodo(1);
-```
